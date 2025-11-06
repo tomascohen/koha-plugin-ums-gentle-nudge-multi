@@ -1,8 +1,10 @@
 package Koha::Plugin::Com::ByWaterSolutions::UMSGentleNudge::ConfigController;
-use C4::Context;
-use C4::Log qw( logaction );
+
 use Modern::Perl;
 use Mojo::Base 'Mojolicious::Controller';
+
+use C4::Context;
+use C4::Log qw( logaction );
 use Koha::Plugin::Com::ByWaterSolutions::UMSGentleNudge;
 use Koha::UMSConfigs;
 

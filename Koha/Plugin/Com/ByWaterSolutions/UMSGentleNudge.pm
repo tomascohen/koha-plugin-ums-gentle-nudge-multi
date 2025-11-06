@@ -53,7 +53,6 @@ our $metadata = {
 };
 
 BEGIN {
-    warn "warn begin";
      my $path = Module::Metadata->find_module_by_name(__PACKAGE__);
     $path =~ s!\.pm$!/lib!;
     unshift @INC, $path;
@@ -66,7 +65,6 @@ BEGIN {
     Koha::Schema->register_class(KohaPluginComBywatersolutionsUmsgentlenudgeConfig => 'Koha::Schema::Result::KohaPluginComBywatersolutionsUmsgentlenudgeConfig');
     # force a refresh of the database handle so that it includes the new classes
     Koha::Database->schema({ new => 1 });
-    warn "warn begin end";
 }
 
 our $json = JSON->new;
